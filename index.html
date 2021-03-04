@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 3</title>
+	<link rel="stylesheet" type="text/css" href="estilos3.css">
+</head>
+<body onmousemove="movi(event)">
+	
+	<script type="text/javascript">
+		
+		function movi(event){
+			cuadro=document.getElementById('cuadro');
+			var x= event.clientX; //posicion mouse x
+			var y= event.clientY; //posicion mouse y
+			//cuadro.innerHTML='X:'+x+'Y:'+y;
+
+			if(x>=328&&x<=966&&y>=72&&y<=474)
+			{
+				cuadro.className="cuadro2";
+				cuadro.innerHTML='<br>ESTAS<br>DENTRO';
+				console.log("dentro");
+			}
+			else{
+				cuadro.className="cuadro";
+				cuadro.innerHTML='<br>ESTAS<br>FUERA';
+				console.log("fuera");
+			}
+			//IZQUIERDA
+			//903,72
+			//903,360
+
+			//DERECHA
+			//264,72
+			//264,360
+		}
+	</script>
+	<div id="cuadrototal" class="cuadrototal" class="cuadrototal">
+		
+	</div>
+	<div id="cuadro"  class="cuadro" class="cuadro2">
+		
+	</div>
+
+
+</body>
+</html>
